@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Teaching Exam Hub — Vacancy, Notes, MCQ Practice | LT Grade GS</title>
+  <meta name="description" content="Teaching exam news, vacancy updates, free notes, MCQ practice and current affairs for CTET / BPSC TRE / STET / LT Grade." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo="> 
+  <style>
+    :root{--bg:#f7fbff;--card:#ffffff;--muted:#526076;--accent:#0ea5a5;--accent-2:#06b6d4}
+    *{box-sizing:border-box;font-family:Inter,system-ui,Segoe UI,Roboto,'Noto Sans',Arial}
+    body{margin:0;background:linear-gradient(180deg,#eef8fb 0%,#f7fbff 100%);color:#05263a}
+    .wrap{max-width:1100px;margin:28px auto;padding:18px}
+    header{display:flex;align-items:center;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:800}
+    h1{margin:0;font-size:20px}
+    .tag{color:var(--muted);font-size:13px}
+    nav{margin-left:auto}
+    nav a{margin-left:10px;text-decoration:none;color:var(--accent);font-weight:700}
+    .hero{display:grid;grid-template-columns:2fr 1fr;gap:16px;margin-top:18px}
+    .card{background:var(--card);border-radius:12px;box-shadow:0 6px 20px rgba(10,31,68,0.06);padding:16px}
+    .btn{display:inline-block;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+    .small{font-size:14px;color:var(--muted)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+    .vacancy-list{max-height:260px;overflow:auto;padding-right:6px}
+    .vac-item{padding:10px;border-radius:8px;border:1px solid #e6f2f2;margin-bottom:8px}
+    .notes-list li{margin-bottom:8px}
+    aside .card{position:sticky;top:18px}
+    footer{margin-top:18px;padding:12px;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr}}
+    input[type="email"]{padding:10px;border-radius:8px;border:1px solid #e6eef2;width:100%}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">LT</div>
+        <div>
+          <h1>Teaching Exam Hub</h1>
+          <div class="tag">Vacancy • Notes • MCQs • Current Affairs</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="https://t.me/ltgradegsfree" target="_blank" rel="noopener">Join Telegram</a>
+        <a href="#vacancies">Vacancies</a>
+        <a href="#notes">Free Notes</a>
+        <a href="#mcq">MCQ Practice</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <main>
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <h2 style="margin:0">NEP 2020 — Quick Summary & Resources</h2>
+              <div class="small">Short notes + 20 MCQs ready. Start practice now.</div>
+            </div>
+            <a class="btn" href="#mcq">Start MCQ Practice</a>
+          </div>
+
+          <div style="margin-top:12px" id="summary">
+            <ol>
+              <li>NEP 2020 — स्वीकृति: 29 जुलाई 2020।</li>
+              <li>नयी संरचना: <strong>5+3+3+4</strong> (Foundational, Preparatory, Middle, Secondary)।</li>
+              <li>मातृभाषा प्राथमिक माध्यम; कक्षा 5 तक अनिवार्य (संभव हो तो 8 तक)।</li>
+              <li>शिक्षक शिक्षा: 4-वर्षीय Integrated B.Ed. का लक्ष्य।</li>
+              <li>Higher Education: MERU, HECI, ABC, MPhil समाप्त।</li>
+            </ol>
+          </div>
+
+          <div style="margin-top:12px" class="grid-3">
+            <div class="card small">
+              <strong>Latest Vacancy</strong>
+              <div class="vacancy-list" id="vacList">
+                <!-- vacancy items injected by JS -->
+              </div>
+              <a class="small" href="#vacancies">See all vacancies →</a>
+            </div>
+
+            <div class="card small">
+              <strong>Recent Notes</strong>
+              <ul class="notes-list" id="notesList">
+                <!-- notes injected by JS -->
+              </ul>
+              <a class="small" href="#notes">All Notes →</a>
+            </div>
+
+            <div class="card small">
+              <strong>Quick Links</strong>
+              <ul style="padding-left:16px;line-height:1.6">
+                <li><a href="#mcq">NEP 2020 MCQ Test</a></li>
+                <li><a href="#current">Current Affairs</a></li>
+                <li><a href="#resources">PYQs & Solutions</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <section id="vacancies" style="margin-top:14px">
+          <h3>All Latest Vacancies</h3>
+          <div class="card" id="vacanciesCard">
+            <p class="small">(यहाँ आप official link, last date और eligibility जोड़ें — below sample items are placeholders.)</p>
+            <div id="vacanciesAll"></div>
+          </div>
+        </section>
+
+        <section id="notes" style="margin-top:14px">
+          <h3>Free Notes & PDFs</h3>
+          <div class="card">
+            <p class="small">Download subject-wise notes and monthly current affairs PDFs.</p>
+            <ul id="notesAll">
+              <!-- full notes list -->
+            </ul>
+          </div>
+        </section>
+
+        <section id="mcq" style="margin-top:14px">
+          <h3>MCQ Practice — NEP 2020 (20 Questions)</h3>
+          <div class="card">
+            <p class="small">Timer based practice and instant scoring. Click below to open interactive test.</p>
+            <a class="btn" href="#" id="openMcq">Open NEP 2020 Test</a>
+          </div>
+        </section>
+
+      </main>
+
+      <aside>
+        <div class="card">
+          <strong>Subscribe for Updates</strong>
+          <p class="small">Get vacancy alerts & free PDFs in inbox.</p>
+          <form id="subForm">
+            <input type="email" id="email" placeholder="Your email" required />
+            <div style="margin-top:8px"><button class="btn" type="submit">Subscribe</button></div>
+          </form>
+        </div>
+
+        <div style="height:12px"></div>
+
+        <div class="card">
+          <strong>Telegram</strong>
+          <p class="small">Get instant vacancy & notes — join our channel.</p>
+          <a class="btn" href="https://t.me/ltgradegsfree" target="_blank">Join Telegram</a>
+        </div>
+
+        <div style="height:12px"></div>
+
+        <div class="card small">
+          <strong>About</strong>
+          <p class="small">This site provides free resources for teaching exam aspirants: vacancy alerts, MCQs, PDFs and coaching tips. Content Writer: <strong>Anurag</strong></p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <div>Content Writer: <strong>Anurag</strong></div>
+      <div class="small">© LT Grade GS — Made for Teaching Exam Aspirants</div>
+    </footer>
+  </div>
+
+  <script>
+    // Placeholder data — replace with server-side or CMS data when available
+    const vacancies = [
+      {title: 'BPSC TRE — Graduate Teacher Vacancy 2025', org:'BPSC', lastDate:'15 Oct 2025', link:'#'},
+      {title: 'CTET Notification 2025 — Paper 1 & 2', org:'CBSE', lastDate:'05 Nov 2025', link:'#'},
+      {title: 'STET Bihar — Post Graduate Teacher', org:'BSEB', lastDate:'20 Oct 2025', link:'#'}
+    ];
+
+    const notes = [
+      {title:'NEP 2020 Summary PDF', tag:'Policy', link:'#'},
+      {title:'Child Development & Pedagogy Notes', tag:'Pedagogy', link:'#'},
+      {title:'Economics Notes for TRE (PDF)', tag:'Economics', link:'#'}
+    ];
+
+    const vacListEl = document.getElementById('vacList');
+    const vacAllEl = document.getElementById('vacanciesAll');
+    const notesListEl = document.getElementById('notesList');
+    const notesAllEl = document.getElementById('notesAll');
+
+    vacancies.forEach(v=>{
+      const item = document.createElement('div');
+      item.className='vac-item';
+      item.innerHTML = `<strong>${v.title}</strong><div class=\"small\">${v.org} — Last Date: ${v.lastDate}</div><div style=\"margin-top:8px\"><a href=\"${v.link}\" class=\"small\">Official Link</a></div>`;
+      vacListEl.appendChild(item);
+
+      const all = document.createElement('div');
+      all.className='vac-item';
+      all.innerHTML = item.innerHTML;
+      vacAllEl.appendChild(all);
+    });
+
+    notes.forEach(n=>{
+      const li = document.createElement('li');
+      li.innerHTML = `<a href=\"${n.link}\">${n.title}</a> <span class=\"small\">• ${n.tag}</span>`;
+      notesListEl.appendChild(li);
+
+      const li2 = document.createElement('li');
+      li2.innerHTML = li.innerHTML;
+      notesAllEl.appendChild(li2);
+    });
+
+    // Open MCQ test (we will open the NEP HTML page if present, else alert)
+    document.getElementById('openMcq').addEventListener('click', function(e){
+      e.preventDefault();
+      // If you hosted the NEP test page, change this URL to its location.
+      // For now, open the Telegram channel as a fallback and show message.
+      window.open('https://t.me/ltgradegsfree', '_blank');
+      alert('MCQ Test available — open the Telegram channel or upload the interactive test page to your server and update the "Open NEP 2020 Test" link.');
+    });
+
+    // Subscribe form (placeholder)
+    document.getElementById('subForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      if(!email){ alert('Please enter email'); return; }
+      alert('Subscribed with ' + email + '. (This is a demo — integrate with Mailchimp/Server to store.)');
+      document.getElementById('email').value='';
+    });
+  </script>
+</body>
+</html>
